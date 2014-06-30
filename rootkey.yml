@@ -1,0 +1,4 @@
+AWS:
+  AssociateTag: associate_tag
+  AccessKeyId:  access_key_id
+  SecretKey:    secret_key
