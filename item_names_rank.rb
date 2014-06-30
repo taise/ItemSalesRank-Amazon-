@@ -19,7 +19,7 @@ open(extended, "w") do |f|
   CSV.foreach(target, {headers: true}) do |line|
     c += 1
     item = item_salesrank.search(line['item_name']).values
-    amazon_info = line.to_h.values.concat(item)
+    amazon_info = line.to_hash.values.concat(item)
     puts "#{Time.now} : #{'%08d' % c} : #{amazon_info.join(",")}"
     f.puts amazon_info.to_ary.to_csv
     sleep 3;
